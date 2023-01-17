@@ -1,9 +1,23 @@
 <div class="parent">
-  <div class="dropdown">
-    <select value="selcect">
-      <option value="india">India</option>
-      <option value="srilanka">srilanka</option>
-      <option value="usa">usa</option>
-    </select>
+  <div class="parent">
+    <!-- <select id="dropdown" class= [value]="current">
+      <ng-container *ngFor="let item of country">
+        <option>{{ item }}</option>
+      </ng-container>
+    </select> -->
+    <div (click)="enter()" (mouseleave)="leave()">
+      <div style="border: 1px solid black">
+        {{ current ? current : "dropDown" }}
+      </div>
+      <div *ngIf="isOpen" style="border: 1px solid black">
+        <ul *ngFor="let item of country">
+          <li class="li" (click)="selected(item)">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
+
+<app-circle></app-circle>

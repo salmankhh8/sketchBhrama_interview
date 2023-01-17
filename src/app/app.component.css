@@ -1,0 +1,25 @@
+.display{
+/* visibility: hidden; */
+display: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+.li{
+    /* text-decoration: none; */
+    list-style-type: none;
+    /* text-decoration: dotted; */
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    text-align: left;
+    border: .5px solid black;
+}
+.dropBody{
+    background-color: rgb(160, 158, 158)
+}
+
+.parent{
+    width: 7rem;
+}

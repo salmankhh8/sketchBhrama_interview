@@ -1,0 +1,15 @@
+<h1>Circle coponent</h1>
+
+<div class="count">
+  <button (click)="count()">count {{ countCircle }}</button>
+</div>
+<div class="count">count {{ clickedCircle }}</div>
+<div *ngIf="countCircle > 0" class="circleParent">
+  <ng-container *ngFor="let item of countArr">
+    <div
+      (click)="circleClicked(item.id)"
+      [ngClass]="item.grayValue ? 'gray' : ''"
+      class="circle"
+    ></div>
+  </ng-container>
+</div>
